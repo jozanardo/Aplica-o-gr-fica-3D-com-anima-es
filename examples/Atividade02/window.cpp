@@ -20,38 +20,31 @@ void Window::onCreate() {
   m_model.loadObj(m_assetsPath + m_object);
   m_model.setupVAO(m_program);
 
-  // Camera at (0,0,0) and looking towards the negative z
   glm::vec3 const eye{0.0f, 0.0f, 0.0f};
   glm::vec3 const at{0.0f, 0.0f, -1.0f};
   glm::vec3 const up{0.0f, 1.0f, 0.0f};
   m_viewMatrix = glm::lookAt(eye, at, up);
 
-  // Setup fishs
   for (auto &fish : m_fishs) {
     randomizeFish(fish);
   }
 }
 
 void Window::randomizeFish(Fish &fish) {
-  // Random position: x and y in [-20, 20), z in [-100, 0)
   std::uniform_real_distribution<float> distPosXY(-20.0f, 20.0f);
   std::uniform_real_distribution<float> distPosZ(-100.0f, 0.0f);
   fish.m_position =
       glm::vec3(distPosXY(m_randomEngine), distPosXY(m_randomEngine),
                 distPosZ(m_randomEngine));
 
-  // Random rotation axis
   fish.m_rotationAxis = glm::sphericalRand(1.0f);
 }
 
 void Window::onUpdate() {
-  // Increase angle by 90 degrees per second
   auto const deltaTime{gsl::narrow_cast<float>(getDeltaTime())};
   m_angle = glm::wrapAngle(m_angle + glm::radians(90.0f) * deltaTime);
 
-  // Update fishs
   for (auto &fish : m_fishs) {
-    // Increase z by 10 units per second
     fish.m_position.z += deltaTime * 10.0f;
 
     // If this fish is behind the camera, select a new random position &
@@ -179,7 +172,7 @@ void Window::onPaintUI() {
       ImGui::SliderFloat("Scale", &m_scale, 0.05f, 5.0f, "%.01f");
 
       ImGui::InputInt("Quantidade", &m_fish_quantity);
-      if (m_fish_quantity < 0) {
+      if (m_fish_quantity <= 0) {
         m_fish_quantity = 1;
       }
       if (m_fishs.size() != m_fish_quantity) {
