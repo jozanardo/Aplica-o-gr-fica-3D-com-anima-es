@@ -60,10 +60,7 @@ Chama randomizeFish para inicializar aleatoriamente as posições e eixos de rot
 ### Função randomizeFish:
 
 Objetivo: Inicializa aleatoriamente a posição e o eixo de rotação de uma criatura marinha.
-
-#### Parâmetros:
-
-Fish &fish: Referência para a estrutura Fish que representa uma criatura marinha.
+Tem como Paraâmentros Fish &fish: Referência para a estrutura Fish que representa uma criatura marinha.
 
 #### Ações:
 
