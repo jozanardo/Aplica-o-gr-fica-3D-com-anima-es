@@ -5,14 +5,14 @@ Guilherme Klinkerfuss Guimarães Pereira - 11201912414
 
 # Explicação do Projeto
 
-Este projeto foi desenvolvido como parte de uma tarefa acadêmica para demonstrar conceitos avançados de gráficos 3D utilizando OpenGL e a biblioteca ABCg (Agência Brasileira de Controle de Gráficos). O objetivo principal é criar uma aplicação interativa que renderiza modelos 3D, aplicando transformações geométricas e iluminação por meio de shaders.
+Este projeto foi desenvolvido como parte de uma tarefa acadêmica para demonstrar conceitos avançados de gráficos 3D utilizando OpenGL e a biblioteca ABCg (UFABC Gráfica). O objetivo principal é criar uma aplicação interativa que renderiza modelos 3D, aplicando transformações geométricas e iluminação por meio de shaders.
 
 # Funcionalidades Implementadas
 ## 1. Modelos 3D e Transformações Geométricas
 Implementação de primitivas OpenGL e transformações geométricas.
 Utilização da classe Model para carregar modelos OBJ, configurando VAOs e VBOs.
 ## 2. Animação e Movimento
-Animação simulando a movimentação de peixes no espaço.
+Animação simulando a movimentação de peixes no mar.
 Utilização de instâncias da estrutura Fish com posições e eixos de rotação aleatórios.
 ## 3. Controle de Projeção
 Alternância entre projeção perspectiva e ortográfica.
@@ -35,8 +35,6 @@ Interface gráfica interativa usando ImGui.
 Controle dinâmico de variáveis importantes, como posição da luz, cor da luz, cor do objeto, intensidades de iluminação, escala e modelo selecionado.
 ## Reload Shaders
 Implementação de um botão "Reload Shaders" para recarregar os shaders em tempo de execução, facilitando o desenvolvimento e a depuração.
-## Conclusão
-Este projeto proporciona uma experiência interativa de gráficos 3D, permitindo ao usuário explorar diferentes modelos, ajustar parâmetros de iluminação e interagir dinamicamente com a cena. A implementação de shaders oferece uma representação visual mais realista dos modelos, incorporando iluminação avançada e efeitos visuais.
 
 # Para ver o resultado final abre no navegador:
-https://jozanardo.github.io/Aplicacao-interativa-com-graficos-2D/
+https://jozanardo.github.io/Aplicao-grafica-3D-com-animacoes/
