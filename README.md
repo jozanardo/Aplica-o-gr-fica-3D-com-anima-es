@@ -36,5 +36,5 @@ Controle dinâmico de variáveis importantes, como posição da luz, cor da luz,
 ## Reload Shaders
 Implementação de um botão "Reload Shaders" para recarregar os shaders em tempo de execução, facilitando o desenvolvimento e a depuração.
 
-# Para ver o resultado final abre no navegador:
+# Para ver o resultado final, acesse o seguinte link no navegador:
 https://jozanardo.github.io/Aplicao-grafica-3D-com-animacoes/
